@@ -10,3 +10,6 @@ build/
 
 # OS X
 .DS_Store
+
+*.iml
+.idea/

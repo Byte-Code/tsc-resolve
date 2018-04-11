@@ -1,8 +1,7 @@
 {
-    "name": "tsc-resolve",
-    "version": "1.0.6",
+    "name": "@byte-code/tsc-resolve",
+    "version": "1.0.7",
     "description": "A tool for resolving typescript modules defined in tsconfig.json",
-    "homepage": "https://github.com/mazhlekov/tsc-resolve",
     "author": "Dimitar Mazhlekov <d.mazhlekov@gmail.com>",
     "license": "MIT",
     "keywords": [
@@ -12,13 +11,14 @@
         "nodejs",
         "module"
     ],
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/mazhlekov/tsc-resolve"
-    },
     "bugs": {
         "url": "https://github.com/mazhlekov/tsc-resolve/issues"
     },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Byte-Code/tsc-resolve.git"
+    },
+    "homepage": "https://github.com/Byte-Code/tsc-resolve",
     "main": "build/index.js",
     "typings": "./build/index.d.ts",
     "bin": {

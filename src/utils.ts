@@ -33,9 +33,11 @@ export function getJSFiles(dir: string, files: string[] = []) {
 }
 
 export async function replaceInFile(filePath: string, replaces: IFileReplace[]) {
+
+    console.log(filePath);
     let newSource = await fs.readFileAsync(filePath, "utf-8");
     for (const replace of replaces) {
-        newSource = newSource.replace(replace.regExp, replace.text);
+        newSource = newSource.replace(replace.regExp, `$1${replace.text}$3`);
     }
     await fs.writeFileAsync(filePath, newSource, "utf-8");
 }
@@ -46,14 +48,6 @@ export function rtrim(str: string, char: string): string {
     } else {
         return str;
     }
-}
-
-export function escapeRegExp(expr: string) {
-    if (typeof expr !== "string") {
-        throw new TypeError("Expected a string");
-    }
-
-    return expr.replace(/[|\\{}()[\]^$+*?.]/g, "\\$&");
 }
 
 export function convertToUnixPath(path: string) {
